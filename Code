@@ -1,0 +1,33 @@
+public class Main
+{
+public static void main(String[] args) {
+ String[] series = new String[200]; 
+ int i=0, num = 1, position = 3, next = 4;
+ 
+ // loop for the sequence 123/4567/89..
+ do
+ {
+ if(i == position)
+ {
+ series[i] = "/";
+ position = position + (++next);
+ }
+ else
+ {
+ series[i] = Integer.toString(num);
+ num++;
+ }
+ i++;
+ }while(num<=100);
+ 
+ // printing the sequence
+ for(int j=0;j<series.length;j++)
+ {
+ if(series[j] != null)
+ {
+ System.out.print(series[j]);
+ }
+ 
+ }
+}
+}
